@@ -11,7 +11,6 @@ async function getProjects(req,res){
 async function getProjectsByID(req, res){
     try{
         const data = await db.query(`SELECT * FROM projects WHERE ID = ${req.body.id}`)
-        console.log(data[0]);
         res.json(data[0]);
     }
     catch(err){

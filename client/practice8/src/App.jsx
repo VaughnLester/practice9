@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { TestPage } from './components/test'
+import { Frontpage } from './components/frontpage';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import { Link } from "react-router-dom";
 
@@ -10,6 +11,7 @@ function App() {
     <>
         <BrowserRouter>
             <Routes>
+                <Route path="/frontpage" element={<Frontpage/>}/>
                 <Route path="/:id" element={<TestPage/>}/>
             </Routes>
             <TestPage/>
